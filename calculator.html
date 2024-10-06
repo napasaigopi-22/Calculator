@@ -4,6 +4,7 @@
     <title>Math Calculator</title>
     <h1>Calculator</h1>
     <link rel="stylesheet" type="text/css" href="Calculator.css">
+    <link rel="javascript" href="Calculator.js">
 </head>
 <body>
 <h2>welcome to the math world</h2>
@@ -29,25 +30,5 @@
     <input type="button" value="=" onclick="calculate()">
     <input type="button" value="/" onclick="appendToDisplay('/')"><br>
 </div>
-
-<script>
-    function appendToDisplay(value) {
-        document.getElementById('display').value += value;
-    }
-
-    function clearDisplay() {
-        document.getElementById('display').value = '';
-    }
-
-    function calculate() {
-        try {
-            let result = eval(document.getElementById('display').value);
-            document.getElementById('display').value = result;
-        } catch (e) {
-            document.getElementById('display').value = 'Error';
-        }
-    }
-</script>
-
 </body>
 </html>
